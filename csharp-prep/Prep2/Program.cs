@@ -8,31 +8,27 @@ class Program
         string GradeInput = Console.ReadLine();
 
         int GradeNumber = int.Parse(GradeInput);
-
+        string Letter = "";
         
         if (GradeNumber >= 90) {
-            string GradeLetter = "A";
-            Console.WriteLine($"Passed! You got this grade: {GradeLetter}");
+            Letter = "A";
         }
         else if (GradeNumber >= 80) {
-            string GradeLetter = "B";
-            Console.WriteLine($"Passed! You got this grade: {GradeLetter}");
+            Letter = "B";
         }
         else if (GradeNumber >= 70) {
-            string GradeLetter = "C";
-            Console.WriteLine($"Passed! You got this grade: {GradeLetter}");
+            Letter = "C";
         }
         else if (GradeNumber >= 60) {
-            string GradeLetter = "D";
-            Console.WriteLine($"Failed. Better luck next time. Grade: {GradeLetter}");
+            Letter = "D";
         }
-        else if (GradeNumber < 60 || GradeNumber > 0) {
-            string GradeLetter = "F";
-            Console.WriteLine($"Failed. Better luck next time. Grade: {GradeLetter}");
+        else if (GradeNumber < 60 && GradeNumber >= 0) {
+            Letter = "F";
         }
         else{
             
             Console.WriteLine($"Something strange Happened. Make sure your value was between 0 and 100.");
         }
+        Console.WriteLine($"Excellent! You grade was: {Letter}.");
     }
 }
