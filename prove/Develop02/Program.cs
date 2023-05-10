@@ -1,9 +1,30 @@
 using System;
+using System.Collections.Generic;
 
-class Program
+class Entry
 {
-    static void Main(string[] args)
+    string UnsavedData = "";
+    string SavedData = "";
+    public string StoreString()
     {
-        Console.WriteLine("Hello Develop02 World!");
+        UnsavedData = Console.ReadLine();
+        return UnsavedData;
+    }
+    public void DisplayEntry(string display)
+    {
+        Console.WriteLine(display);
+    }
+}
+class Prompt
+{
+    List<string> PromptCollection = new List<string>();
+    string InspirationalMessage;
+
+    public void DisplyRandomPrompt()
+    {
+        Random inspiration = new Random();
+
+        int NumberOfPrompts = PromptCollection.Count;
+
     }
 }
