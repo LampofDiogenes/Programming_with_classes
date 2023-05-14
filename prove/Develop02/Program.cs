@@ -1,29 +1,42 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 class Entry
 {
-    string UnsavedData = "";
-    string SavedData = "";
-    public string StoreString()
+
+
+    public void StoreString(string UnsavedData, string FilePath)
     {
+        // Read the "entry" that the user gave.
         UnsavedData = Console.ReadLine();
-        return UnsavedData;
+
+
+        // Dumping the information of the user into the filename
+        using (StreamWriter writer = new StreamWriter(FilePath)){
+            
+            // Data to be Dumped
+            Console.WriteLine(UnsavedData);
+        }
+        // Telling User task accomplished
+        Console.WriteLine("Data Saved. ");
+        
     }
     public void DisplayEntry(string display)
     {
         Console.WriteLine(display);
+
     }
 }
 class Prompt
 {
     List<string> PromptCollection = new List<string>();
-    string InspirationalMessage;
 
     public void DisplyRandomPrompt()
     {
         Random inspiration = new Random();
 
+        // Adding prompts for the prompt generator to push
         PromptCollection.Add("What was your favorite meal today?");
         PromptCollection.Add("Name something that you are proud of today");
         PromptCollection.Add("Name a regret you want to improve upon in the future");
@@ -36,7 +49,6 @@ class Prompt
         string SelectRandomPrompt = PromptCollection[RandomNumber];
 
         Console.WriteLine(SelectRandomPrompt);
-
     }
 }
 
