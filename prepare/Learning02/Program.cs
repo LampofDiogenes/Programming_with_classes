@@ -20,11 +20,4 @@ public static void DisplayJob(string[] jobtitle, string[] company, int[] StartYe
 public class Resume
 {
 
-
-    public list<Job> _jobs = new list<Job>();
-    public static void DisplayResume(string[] name, list<>)
-    {
-
-    }
-
 }
