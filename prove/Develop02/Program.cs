@@ -2,10 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+namespace Journal{
 class Entry
 {
-
-
     public void StoreString(string UnsavedData, string FilePath)
     {
         // Read the "entry" that the user gave.
@@ -22,12 +21,13 @@ class Entry
         Console.WriteLine("Data Saved. ");
         
     }
-    public void DisplayEntry(string display)
+    public void DisplayEntry(string FileName)
     {
-        Console.WriteLine(display);
+       
 
     }
 }
+
 class Prompt
 {
     List<string> PromptCollection = new List<string>();
@@ -52,8 +52,8 @@ class Prompt
     }
 }
 
-class ProgramRunning{
-    public void Main(string[] args)
+class Program{
+    static void Main(string[] args)
     {
         // find what the user wants
         Console.WriteLine("Hello. Please Select from the options: ");
@@ -79,4 +79,5 @@ class ProgramRunning{
         }
 
     }
+}
 }

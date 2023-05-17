@@ -1,9 +1,18 @@
 using System;
+using System.Linq;
+using System.Collections.Generic;
 
-class Program
-{
-    static void Main(string[] args)
+namespace ScriptureMemorize{
+
+    class Scripture
     {
-        Console.WriteLine("Hello Develop03 World!");
+        string _reference;
+        public List<string> ConvertScripture(string[] args)
+        {
+            List<string> ListOfWords = _reference?.Split(" ").ToList();
+
+            return ListOfWords;
+        }
     }
+
 }
