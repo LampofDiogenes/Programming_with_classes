@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-class reference{
+class Reference{
 
     string verse = "John 3:16";
 
