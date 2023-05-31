@@ -3,11 +3,28 @@ using System.Linq;
 using System.Collections.Generic;
 
     class Program{
-        List<string> Verse = Scripture.ShowScripture();
+        
+        
+        
+        
+        
 
-        public void main(){
+        static void Main(string[] args){
+
+            // Moved Constructors to underneath main. Works now, I guess
+            List<string> ScriptureInMain;
+            ManageWords Karen = new ManageWords(); 
+            Scripture power = new Scripture();
+            power.ConvertScripture();
+            ScriptureInMain = power.ShowScripture();
             Console.WriteLine("The Verse is :");
-            Console.WriteLine(Verse);
+
+            // printing each word individually
+            foreach (string i in ScriptureInMain)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
             Console.WriteLine("Type Enter or Quit when done. ");
             string QuitOrNOt = Console.ReadLine();
 
@@ -20,17 +37,11 @@ using System.Collections.Generic;
             else if (QuitOrNOt is "Enter")
                 {
                     Console.Clear();
-                    List<string> NewScripture = ManageWords.DeleteRandomWords(Scripture.ShowScripture());
+                    List<string> NewScripture = Karen.DeleteRandomWords(ScriptureInMain);
 
                     Console.WriteLine(NewScripture);
                 }
             }
-
-
         }
-
-
-
-
 }
 
