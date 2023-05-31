@@ -45,6 +45,7 @@ using System.Collections.Generic;
                     }
                 }
                 
+                // need to fix this so that the user cannot continue after pressing quit
                 Console.WriteLine();
                 Console.WriteLine("Type Enter or Quit when done. ");
                 QuitOrNOt = Console.ReadLine();
