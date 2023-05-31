@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-class ManageWords{
+class Words{
     private int FindRandomWord(){
 
         Random rand = new Random();
@@ -28,7 +28,7 @@ class ManageWords{
     public List<string> DeleteRandomWords(List<string> ScriptureVerse){
 
         Random Rand = new Random();
-        int RandomIndex = Rand.Next(ScriptureVerse.Count);
+        int RandomIndex = Rand.Next(0, ScriptureVerse.Count);
 
         for (int i = 0; i < 3; i++)
         {

@@ -9,11 +9,11 @@ using System.Collections.Generic;
         
         
 
-        static void Main(string[] args){
+        static void Main(){
 
             // Moved Constructors to underneath main. Works now, I guess
             List<string> ScriptureInMain;
-            ManageWords Karen = new ManageWords(); 
+            Words Karen = new Words(); 
             Scripture power = new Scripture();
             power.ConvertScripture();
             ScriptureInMain = power.ShowScripture();
@@ -28,19 +28,26 @@ using System.Collections.Generic;
             Console.WriteLine("Type Enter or Quit when done. ");
             string QuitOrNOt = Console.ReadLine();
 
-            while (QuitOrNOt != "Quit") 
+            while (QuitOrNOt is "Quit" || QuitOrNOt is "Enter")
             {
                 if  ((QuitOrNOt is "Quit"))
                 {
                     Console.Clear();
                 }
-            else if (QuitOrNOt is "Enter")
+                else if (QuitOrNOt is "Enter")
                 {
                     Console.Clear();
                     List<string> NewScripture = Karen.DeleteRandomWords(ScriptureInMain);
 
-                    Console.WriteLine(NewScripture);
+                    foreach (string word in NewScripture)
+                    {
+                        Console.Write(word + " ");
+                    }
                 }
+                
+                Console.WriteLine();
+                Console.WriteLine("Type Enter or Quit when done. ");
+                QuitOrNOt = Console.ReadLine();
             }
         }
 }
