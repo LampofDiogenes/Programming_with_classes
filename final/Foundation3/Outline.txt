@@ -1,0 +1,31 @@
+Class Event
+ - Attributes:
+    - Str _EventTitle
+    - Str _Description
+    - Str _EventDate
+    - Str _EventTime
+    - Str _address
+ - Methods:
+    - 
+
+
+Class Lecture : Event
+ - Attributes:
+    - Str _speaker
+    - Int _capacity
+ - Methods:
+    - 
+    
+Class Receptions : Event
+ - Attributes:
+    - str _registeredPeople
+ - Methods:
+    - RegisteringPeople(str person)
+
+
+Class OutdoorActivities : Event
+ - Attributes:
+    - str WeatherForecast
+ - Methods:
+    - 
+
