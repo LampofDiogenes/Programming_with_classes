@@ -1,0 +1,23 @@
+Class Video
+ - Attributes:
+    - Str _title
+    - str _author
+    - int _time (seconds)
+ - Methods:
+    - SetTitle(str title)
+    - GetTitle()
+    - SetAuthor(str author)
+    - GetTitle()
+    - SetTime(int seconds)
+    - GetTime()
+
+Class Comment
+ - Attributes:
+    - str _authorName
+    - str _CommentContent
+ - Methods:
+    - SetName(str name)
+    - GetName()
+    - SetContent(str comment)
+    - GetContent()
+
