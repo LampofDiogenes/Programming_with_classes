@@ -1,12 +1,23 @@
 using System;
 
-class Video
+class Comment
 {
     string _authorName;
     string _commentContent;
-    
-    static void Main(string[] args)
+    public void SetAuthor(string author)
     {
-        Console.WriteLine("Hello Foundation1 World!");
+        _authorName = author;
+    }
+    public string GetAuthor()
+    {
+        return _authorName;
+    }
+    public void SetComment(string comment)
+    {
+        _commentContent = comment;
+    }
+    public string GetComment()
+    {
+        return _commentContent;
     }
 }
