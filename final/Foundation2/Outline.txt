@@ -1,0 +1,31 @@
+Class Order
+    - Customer _customer
+    - List<Product> _order
+
+    - TotalPrice()
+    - ShippingFee()
+    - PackingLabel()
+    - ShippingLabel()
+
+Class Customer
+    - str _name
+    - Address _address
+
+    - BooleanUSA()
+
+
+Class Address
+    - str _streetAdress
+    - str _city
+    - str _state
+    - str _country
+
+    - BooleanUSA()
+    - FullAddress()
+
+
+Class Product
+    - str _productName
+    - str _productID
+    - int _price
+    - int _quantity
