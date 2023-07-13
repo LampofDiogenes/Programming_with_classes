@@ -4,5 +4,5 @@ using System.Collections.Generic;
 
 class Outdoor : Event
 {
-
+    string _forecast;
 }
