@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 class Event
 {
-    string _title;
-    string _description;
-    string _date;
-    string _time;
-     _address;
-    string _eventType;
+    protected string _title;
+    protected string _description;
+    protected string _date;
+    protected string _time;
+    protected Address _address;
+    protected string _eventType;
 
-    public Event(string title, string description, string date, string time, string address)
+    public Event(string title, string description, string date, string time, Address address)
     {
         _title = title;
         _description = description;

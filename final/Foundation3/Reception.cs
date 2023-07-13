@@ -4,5 +4,5 @@ using System.Collections.Generic;
 
 class Reception : Event
 {
-    List<string> _registeredPeople;
+    protected List<string> _registeredPeople;
 }
