@@ -7,6 +7,11 @@ class Customer
     string _name;
     Address _customerAddress = new Address();
 
+    public Customer(string name, Address address)
+    {
+        _name = name;
+        _customerAddress = address;
+    }
     public string GetName()
     {
         return _name;

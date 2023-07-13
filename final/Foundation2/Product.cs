@@ -9,6 +9,14 @@ class Product
     int _price;
     int _quantity;
 
+    public Product(string name, string ID, int price, int quantity)
+    {
+        _productName = name;
+        _productID = ID;
+        _price = price;
+        _quantity = quantity;
+    }
+
     public void SetName(string productName)
     {
         _productName = productName;

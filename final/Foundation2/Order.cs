@@ -9,14 +9,16 @@ class Order
     List<string> _packingLabel = new List<string>();
     List<string> _shippingLabel = new List<string>();
     int _totalPrice;
+    int _shippingPrice;
 
     public Order(Customer customer, List<Product> productlist)
     {
         _customer = customer;
         _productList = productlist;
     }
-    public int CartTotal()
+    public int CalculateTotal()
     {
+        _totalPrice = 0;
         foreach (Product product in _productList)
         {
             _totalPrice += product.ItemTotal();
@@ -27,12 +29,13 @@ class Order
     {
         if (_customer.FindUSA() is "USA")
         {
-            return 5;
+            _shippingPrice = 5;
         }
         else
         {
-            return 35;
+            _shippingPrice =  35;
         }
+        return _shippingPrice;
     }
 
     public List<string> CreatePackingLabel()
@@ -47,6 +50,10 @@ class Order
     public string CreateShippingLabel()
     {
         return _customer.GetName() + ", " + _customer.GetAddress();
+    }
+    public int TotalCost()
+    {
+        return _totalPrice + _shippingPrice;
     }
 
 }
