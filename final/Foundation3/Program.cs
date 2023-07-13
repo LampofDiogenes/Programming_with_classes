@@ -39,7 +39,7 @@ class Program
             Event.EventType();
             Console.WriteLine($" The Short description: {Event.ShortDescription()}");
             Console.WriteLine($" Here are the Standard Details: {Event.StandardDetails()}");
-            Console.WriteLine($" !!!!!!!!!!!!!Here are the full Details: ");
+            Console.WriteLine($" Here are the full Details: ");
             
             Console.WriteLine(Event.FullDetails());
         }
