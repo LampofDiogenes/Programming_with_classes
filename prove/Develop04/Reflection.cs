@@ -14,7 +14,7 @@ class Reflection : Activity
     public override void DefaultActivityDescription()
     {
         _activityDescription = @"This is an activity to reflect on details about 
-        an experience where you demonstrated strength";
+    an experience where you demonstrated strength";
     }
 
 
