@@ -7,7 +7,6 @@ class Activity
 {
     protected string _activityName;
     protected string _activityDescription;
-    protected int _activityDuration;
 
     public Activity()
     {

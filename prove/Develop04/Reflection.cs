@@ -1,11 +1,24 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Runtime;
+using System.Threading;
 
 class Reflection : Activity
 {
-    List<string> _reflectionPrompts;
-    string _prompt;
+    List<string> _MainPrompt = new List<string>();
+    List<string> _deepeningQuestions = new List<string>();
+    Random _rand = new Random();
+    int _promptQuantity;
+
+    public void AddMainPrompt(string prompt)
+    {
+        _MainPrompt.Add(prompt);
+    }
+    public void AddDeepeningQuestion(string prompt)
+    {
+        _deepeningQuestions.Add(prompt);
+    }
 
     public override void DefaultActivityName()
     {
@@ -17,26 +30,40 @@ class Reflection : Activity
     an experience where you demonstrated strength";
     }
 
-
-    public List<string> GetReflectionPrompts()
+    public string FindRandomPrompt(List<string> promptList)
     {
-        return _reflectionPrompts;
+        
+        // find the amount of prompts in the list
+        _promptQuantity = promptList.Count();
+
+        // use the random number to call a specific prompt in the list
+        int _randomNumber = _rand.Next(_promptQuantity);
+        string _randomPrompt = promptList[_randomNumber];
+        
+        return _randomPrompt;
     }
 
-    public void SetReflectionPrompts(List<string> value)
+    public void ReflectionActivity(int activityDuration)
     {
-        _reflectionPrompts = value;
+        Console.Clear();
+        
+        // Give the First General Prompt
+        Console.WriteLine(FindRandomPrompt(_MainPrompt));
+        
+        PauseTime(2);
+        int timeTaken = 4;
+
+        while (timeTaken <= activityDuration)
+        {
+        // Give Deepening Questions
+        Console.Clear();
+        Console.WriteLine(FindRandomPrompt(_deepeningQuestions));
+        PauseTime(2);
+        timeTaken += 4;
+        Console.Clear();
+        }
     }
 
-    // Getter and Setter for _prompt
-    public string GetPrompt()
-    {
-        return _prompt;
-    }
 
-    public void SetPrompt(string prompt)
-    {
-        _prompt = prompt;
-    }
 
 }
