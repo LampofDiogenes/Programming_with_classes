@@ -46,7 +46,9 @@ class Listing : Activity
     {
         // print a random prompt in the _promptList
         Console.WriteLine(FindRandomPrompt(_promptList));
+        Console.WriteLine();
         PauseTime(2);
+        Console.WriteLine();
 
         _startTime = DateTime.Now;
         _endTime = _startTime.AddSeconds(activityDuration);
@@ -55,20 +57,20 @@ class Listing : Activity
         
         while (_startTime <= _endTime)
         {
-            ConsoleKeyInfo keyInfo = Console.ReadKey(intercept: true);
-            if (keyInfo.Key == ConsoleKey.Enter)
+            _listedItem = Console.ReadLine();
+            
+            if (_startTime >= _endTime)
             {
-                _listedItem = Console.ReadLine();
-                _userList.Add(_listedItem);
-                _QuanitityOfItems += 1;
-
-                
+                break;
             }
+            
+            _userList.Add(_listedItem);
+            _QuanitityOfItems += 1;
             _startTime = DateTime.Now;
+            
         }
-
         Console.WriteLine("Time's Up!");
         PauseTime(2);
-        Console.WriteLine($"You entered {_QuanitityOfItems}");
+        Console.WriteLine($"You entered: {_QuanitityOfItems} items");
     }
 }

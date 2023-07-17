@@ -100,7 +100,7 @@ class Program
             Console.WriteLine($"Great Work!");
             activity.PauseTime(2);
             Console.WriteLine($"You have completed: {activity}");
-            Console.WriteLine($"You have done this for {activityDuration}seconds!");
+            Console.WriteLine($"You have done this for {activityDuration} seconds!");
             activity.PauseTime(4);
             Console.Clear();
         }
