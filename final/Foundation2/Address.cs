@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 class Address
 {
-    string _streetAddress;
-    string _city;
-    string _state;
-    string _country;
+    private string _streetAddress;
+    private string _city;
+    private string _state;
+    private string _country;
 
     public Address()
     {
