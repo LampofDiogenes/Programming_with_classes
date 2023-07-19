@@ -2,8 +2,32 @@ using System;
 
 class Simple : Goal
 {
-    static void Main(string[] args)
+    public override void GoalCompleted()
     {
-        Console.WriteLine("Hello Develop05 World!");
+        base.GoalCompleted();
+        PointsRecieved();
+    }
+    public override int PointsRecieved()
+    {
+        if (_timesCompleted is 1)
+        {
+            return _pointValue;
+        }
+        else
+        {
+            return 0;
+        }   
+    }
+    public override string ShowCompletion()
+    {
+        if (_timesCompleted is 1)
+        {
+         return $"[Completed]";   
+        }
+        else
+        {
+            return "[Incomplete]";
+        }
+        
     }
 }

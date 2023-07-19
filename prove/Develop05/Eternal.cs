@@ -2,8 +2,17 @@ using System;
 
 class Eternal : Goal
 {
-    static void Main(string[] args)
+    public override void GoalCompleted()
     {
-        Console.WriteLine("Hello Develop05 World!");
+        _timesCompleted += 1;
+    }
+    public override int PointsRecieved()
+    {
+        
+        return _pointValue;
+    }
+    public override string ShowCompletion()
+    {
+        return "[Keep Going!]";
     }
 }
