@@ -98,7 +98,7 @@ class Program
             }
             else if (choseOption is "4")
             {
-
+                Console.WriteLine("Incomplete.");
             }
             else if (choseOption is "5")
             {
